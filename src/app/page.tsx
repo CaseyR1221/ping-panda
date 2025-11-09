@@ -1,6 +1,7 @@
 import { MaxWidthWrapper } from "@/app/components/max-width-wrapper"
 import { Heading } from "./components/heading"
 import { Check } from "lucide-react"
+import { ShinyButton } from "./components/shiny-button"
 
 const Homepage = () => {
   return (
@@ -28,13 +29,23 @@ const Homepage = () => {
             </p>
 
             <ul className="flex flex-col items-center sm:items-start space-y-2 text-base/7 text-gray-600">
-              {["Real-time Discord Alerts for critical moments", "Buy once, use forever", "Track sales, signups, and more"].map((item, index) => (
+              {[
+                "Real-time Discord Alerts for critical moments",
+                "Buy once, use forever",
+                "Track sales, signups, and more",
+              ].map((item, index) => (
                 <li key={index} className="flex gap-1.5 items-center text-left">
                   <Check className="size-5 shrink-0 text-brand-700" />
                   {item}
                 </li>
               ))}
             </ul>
+
+            <div className="w-full max-w-80">
+              <ShinyButton href="/sign-up" className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                Start For Free Today
+              </ShinyButton>
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
